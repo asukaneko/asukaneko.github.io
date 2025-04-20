@@ -1,0 +1,144 @@
+<div align="center">
+    <h1 style="text-align:center;">🚀可以下载本子和聊天的猫娘机器人</h1> 
+    <p><img src="https://img.picui.cn/free/2025/04/19/6803c76d2bbf9.png" alt="cover"></p>
+    <blockquote>
+    <p><em>a bot for downloading comics and chatting with ai</em></p>
+    </blockquote>
+    </div>
+    <h2><a href="https://github.com/asukaneko/NapCat-jmcomic_download-bot/graphs/contributors"><img src="https://img.shields.io/github/contributors/asukaneko/NapCat-jmcomic_download-bot.svg?style=flat-square" alt="Contributors"></a>
+    <a href="https://github.com/asukaneko/NapCat-jmcomic_download-bot/network/members"><img src="https://img.shields.io/github/forks/asukaneko/NapCat-jmcomic_download-bot.svg?style=flat-square" alt="Forks"></a>
+    <a href="https://github.com/asukaneko/NapCat-jmcomic_download-bot/stargazers"><img src="https://img.shields.io/github/stars/asukaneko/NapCat-jmcomic_download-bot.svg?style=flat-square" alt="Stargazers"></a>
+    <a href="https://img.shields.io/github/issues/asukaneko/NapCat-jmcomic_download-bot.svg"><img src="https://img.shields.io/github/issues/asukaneko/NapCat-jmcomic_download-bot.svg?style=flat-square" alt="Issues"></a>
+    <a href="https://github.com/asukaneko/NapCat-jmcomic_download-bot/blob/master/LICENSE"><img src="https://img.shields.io/github/license/asukaneko/NapCat-jmcomic_download-bot.svg?style=flat-square" alt="MIT License"></a></h2>
+    <h3>开始之前</h3>
+    <blockquote>
+    <p>环境为 <u><em><strong>windows</strong></em></u><br>
+    建议使用 <strong>小号</strong> 登录<br>
+    基于jmcomic和ncatbot开发
+    有任何问题欢迎提issue，或发送给我的邮箱<a href="mailto:ycssbc@126.com">ycssbc@126.com</a></p>
+    </blockquote>
+    <ul>
+    <li><strong>相关文档</strong></li>
+    </ul>
+    
+    
+    
+    
+    
+    
+    
+    
+    <table><thead><tr><th align="center">jmcomic</th><th align="center"><a href="https://github.com/hect0x7/JMComic-Crawler-Python"><img src="https://img.shields.io/badge/jmcomic-on_Github-blue" alt=""></a></th><th align="center"><a href="https://jmcomic.readthedocs.io/zh-cn/latest/"><img src="https://img.shields.io/badge/jmcomic-Readthedocs.io-orange" alt=""></a></th></tr></thead></table>
+    
+    
+    
+    
+    
+    
+    
+    
+    <table><thead><tr><th align="center">napcat</th><th align="center"><a href="https://github.com/NapNeko/NapCatQQ"><img src="https://img.shields.io/badge/napcat-on_Github-blue" alt=""></a></th><th align="center"><a href="https://napneko.github.io"><img src="https://img.shields.io/badge/napcat-Github.IO-orange" alt=""></a></th></tr></thead></table>
+    
+    
+    
+    
+    
+    
+    
+    
+    <table><thead><tr><th align="center">ncatbot</th><th align="center"><a href="https://github.com/liyihao1110/ncatbot"><img src="https://img.shields.io/badge/ncatbot-on_Github-blue" alt=""></a></th><th align="center"><a href="https://docs.ncatbot.xyz/"><img src="https://img.shields.io/badge/Python_Sdk-Ncatbot-8A2BE2" alt=""></a></th></tr></thead></table>
+    <pre><code class="code-highlight"><span class="code-line line-number" line="1">目录结构：
+    </span><span class="code-line line-number" line="2">.
+    </span><span class="code-line line-number" line="3">│  bot.py
+    </span><span class="code-line line-number" line="4">│  chat.py
+    </span><span class="code-line line-number" line="5">│  config.ini
+    </span><span class="code-line line-number" line="6">│  config.py
+    </span><span class="code-line line-number" line="7">│  commands.py
+    </span><span class="code-line line-number" line="8">│  LICENSE
+    </span><span class="code-line line-number" line="9">│  neko.txt
+    </span><span class="code-line line-number" line="10">│  number.txt
+    </span><span class="code-line line-number" line="11">│  option.yml
+    </span><span class="code-line line-number" line="12">│  README.md
+    </span><span class="code-line line-number" line="13">│  requirements.txt
+    </span><span class="code-line line-number" line="14">│  urls.ini
+    </span><span class="code-line line-number" line="15">│  
+    </span><span class="code-line line-number" line="16">├─logs
+    </span><span class="code-line line-number" line="17">│      
+    </span><span class="code-line line-number" line="18">├─napcat
+    </span><span class="code-line line-number" line="19">│  ├─...... 
+    </span><span class="code-line line-number" line="20">│  └─......
+    </span><span class="code-line line-number" line="21">├─plugins
+    </span><span class="code-line line-number" line="22">│
+    </span><span class="code-line line-number" line="23">├─prompts
+    </span><span class="code-line line-number" line="24">│  ├─group
+    </span><span class="code-line line-number" line="25">│  └─user
+    </span><span class="code-line line-number" line="26">├─saved_images
+    </span><span class="code-line line-number" line="27">│      
+    </span><span class="code-line line-number" line="28">├─saved_message
+    </span><span class="code-line line-number" line="29">│
+    </span><span class="code-line line-number" line="30">└─cache
+    </span><span class="code-line line-number" line="31">    ├─comic
+    </span><span class="code-line line-number" line="32">    ├─saved_images
+    </span><span class="code-line line-number" line="33">    ├─list
+    </span><span class="code-line line-number" line="34">    ├─fav
+    </span><span class="code-line line-number" line="35">    ├─pdf
+    </span><span class="code-line line-number" line="36">    └─......
+    </span></code></pre>
+    <h3>下载源码</h3>
+    <pre><code class="code-highlight"><span class="code-line line-number" line="1">git clone https://github.com/asukaneko/NapCat-jmcomic_download-bot.git
+    </span></code></pre>
+    <h3>安装依赖</h3>
+    <pre><code class="code-highlight"><span class="code-line line-number" line="1">cd NapCat-jmcomic_download-bot
+    </span><span class="code-line line-number" line="2">pip install -r requirements.txt
+    </span></code></pre>
+    <h3>更改配置</h3>
+    <pre><code class="code-highlight"><span class="code-line line-number" line="1">config.ini：修改账号、大模型api、图片保存等
+    </span><span class="code-line line-number" line="2">option.yml: 修改漫画下载目录、下载方式等
+    </span><span class="code-line line-number" line="3">urls.ini:(可不修改) 修改图片获取api地址, 如不修改则使用默认地址
+    </span></code></pre>
+    <h3>运行</h3>
+    <pre><code class="code-highlight"><span class="code-line line-number" line="1">python bot.py
+    </span></code></pre>
+    <p>命令行会提示下载napcat，然后扫码登录即可</p>
+    <h3>命令相关</h3>
+    <blockquote>
+    <p><strong>commands.py 中 设置了 <em><strong>命令注册装饰器</strong></em> ，可以自行添加命令</strong></p>
+    </blockquote>
+    <hr>
+    <p>命令列表：</p>
+    <blockquote>
+    <p><em><strong>/jm xxxxxx 下载漫画<br>
+    /search xxx 搜索漫画<br>
+    /get_fav 获取收藏夹<br>
+    /jmrank 获取排行榜<br>
+    /add_fav xxx 添加收藏夹<br>
+    /set_prompt 或 /sp 设置提示词<br>
+    /del_prompt 或 /dp 删除提示词<br>
+    /get_prompt 或 /gp 获取提示词<br>
+    /agree   同意好友请求<br>
+    /restart   重启Bot<br>
+    /random_image 或 /ri 发送随机图片<br>
+    /random_emoticons 或 /re 发送随机表情包<br>
+    /st 标签名 发送随机涩图,标签支持与或(&amp; |)<br>
+    /help 或 /h 查看帮助</strong></em><br>
+    ……</p>
+    </blockquote>
+    <h3>提示</h3>
+    <ul>
+    <li>登录以后可在napcat\logs文件夹下找到webui的登录地址</li>
+    <li><em><strong>如果你发现没有正常配置napcat，则打开网址：<a href="http://localhost:6099">http://localhost:6099</a>, token默认为napcat，然后登录，在网络配置那里新建一个websocket服务端，端口为默认的3001，然后保存即可</strong></em></li>
+    <li>群聊使用 <em>/chat</em> 命令或 <em>@机器人</em> 即可聊天，私聊默认处理所有非命令消息为聊天</li>
+    <li><em>大模型默认使用硅基流动的，新用户免费赠送15元</em></li>
+    <li>群聊想要ai处理图片，则先发图片，再回复自己的信息，回复内容必须要先@机器人</li>
+    <li>tts可以自己上传音色，详情看chat.py中注释</li>
+    <li>可以更改neko.txt中的提示词，实现不同的角色</li>
+    </ul>
+    <h3>更多</h3>
+    <ul>
+    <li>支持图片识别，需去<a href="https://platform.moonshot.cn/console/account">https://platform.moonshot.cn/console/account</a> 获取api，免费赠送15元。填入config.ini中（第二个api）</li>
+    <li>支持多群聊以及用户自定义提示词</li>
+    <li>群聊支持用户感知，聊天支持时间感知</li>
+    <li>支持保存对话记录</li>
+    <li>快速添加命令</li>
+    <li>配置要求低，轻量，占用内存小</li>
+    </ul>
